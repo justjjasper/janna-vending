@@ -1,6 +1,6 @@
-# JANA Vending
+# Janna Vending
 
-Premium smart vending website for JANA Vending — serving businesses across the Los Angeles area.
+Premium smart vending website for Janna Vending — serving businesses across the Los Angeles area.
 
 ## Stack
 
@@ -20,7 +20,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## EmailJS Setup (Contact Form)
 
-The contact form uses [EmailJS](https://www.emailjs.com/) to send submissions to `janavending@gmail.com`. Without configuration, the form falls back to opening the user's email client via `mailto:`.
+The contact form uses [EmailJS](https://www.emailjs.com/) to send submissions to `jannavending@gmail.com`. Without configuration, the form falls back to opening the user's email client via `mailto:`.
 
 1. Create a free account at [emailjs.com](https://www.emailjs.com/)
 2. Create an email service connected to Gmail

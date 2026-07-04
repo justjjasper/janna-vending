@@ -6,7 +6,7 @@ import { Section } from '../components/ui/Section'
 import { PageHeader } from '../components/ui/Typography'
 
 const contactInfo = {
-  email: 'janavending@gmail.com',
+  email: 'jannavending@gmail.com',
   phone: '310-989-4448',
 }
 
@@ -44,7 +44,7 @@ export function ContactPage() {
     setErrorMessage('')
 
     if (!isEmailJsConfigured) {
-      const subject = encodeURIComponent('JANA Vending Inquiry')
+      const subject = encodeURIComponent('Janna Vending Inquiry')
       const body = encodeURIComponent(
         `Name: ${formData.fullName}\nEmail: ${formData.email}\nBusiness: ${formData.businessName || 'N/A'}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`,
       )
@@ -72,7 +72,7 @@ export function ContactPage() {
     } catch {
       setStatus('error')
       setErrorMessage(
-        'Something went wrong sending your message. Please email us directly at janavending@gmail.com.',
+        'Something went wrong sending your message. Please email us directly at jannavending@gmail.com.',
       )
     }
   }

@@ -7,7 +7,7 @@ export function About() {
       <SectionHeading
         id="about-heading"
         title="Vending that works as hard as your team"
-        description="JANA Vending partners with businesses across Los Angeles to bring convenient food and drink access directly to the workplace. From office break rooms to gym lobbies and warehouse floors, we make sure your people have what they need — without adding another task to your plate."
+        description="Janna Vending partners with businesses across Los Angeles to bring convenient food and drink access directly to the workplace. From office break rooms to gym lobbies and warehouse floors, we make sure your people have what they need — without adding another task to your plate."
       />
       <div className="mx-auto max-w-3xl">
         <p className="text-center text-base leading-relaxed text-muted">

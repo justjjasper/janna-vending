@@ -17,7 +17,7 @@ export function Hero() {
             id="hero-heading"
             className="mt-4 font-display text-4xl font-bold tracking-tight text-charcoal sm:text-5xl lg:text-6xl"
           >
-            JANA Vending
+            Janna Vending
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
             Smart snacks and drinks for the workplaces that keep LA moving. Premium

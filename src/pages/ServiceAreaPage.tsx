@@ -38,7 +38,7 @@ export function ServiceAreaPage() {
       <SectionHeading
         id="service-area-page-heading"
         title="Service Area"
-        description="JANA Vending serves businesses throughout Los Angeles County. If you are in or near the areas below, we would love to partner with you."
+        description="Janna Vending serves businesses throughout Los Angeles County. If you are in or near the areas below, we would love to partner with you."
       />
 
       <div className="mx-auto max-w-3xl">

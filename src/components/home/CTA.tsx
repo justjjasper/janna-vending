@@ -20,11 +20,11 @@ export function CTA() {
             Email Us
           </Button>
           <Button
-            href="mailto:janavending@gmail.com"
+            href="mailto:jannavending@gmail.com"
             variant="secondary"
             size="lg"
           >
-            janavending@gmail.com
+            jannavending@gmail.com
           </Button>
         </div>
       </div>

@@ -12,7 +12,7 @@ function Logo() {
     <Link
       to="/"
       className="flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-      aria-label="JANA Vending — Home"
+      aria-label="Janna Vending — Home"
     >
       <span
         className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary font-display text-sm font-bold text-white"
@@ -21,7 +21,7 @@ function Logo() {
         JV
       </span>
       <span className="font-display text-lg font-semibold tracking-tight text-charcoal">
-        JANA Vending
+        Janna Vending
       </span>
     </Link>
   )

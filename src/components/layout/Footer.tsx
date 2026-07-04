@@ -3,7 +3,7 @@ import { navItems } from '../../data/navigation'
 import { Container } from '../ui/Container'
 
 const contactInfo = {
-  email: 'janavending@gmail.com',
+  email: 'jannavending@gmail.com',
   phone: '310-989-4448',
 }
 
@@ -18,7 +18,7 @@ export function Footer() {
             <Link
               to="/"
               className="inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
-              aria-label="JANA Vending — Home"
+              aria-label="Janna Vending — Home"
             >
               <span
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary font-display text-sm font-bold text-white"
@@ -26,7 +26,7 @@ export function Footer() {
               >
                 JV
               </span>
-              <span className="font-display text-lg font-semibold">JANA Vending</span>
+              <span className="font-display text-lg font-semibold">Janna Vending</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-gray-400">
               Premium smart vending for workplaces across the Los Angeles area. Fresh
@@ -105,7 +105,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-800 pt-8 sm:flex-row">
           <p className="text-sm text-gray-500">
-            &copy; {currentYear} JANA Vending. All rights reserved.
+            &copy; {currentYear} Janna Vending. All rights reserved.
           </p>
           <p className="text-sm text-gray-500">
             Smart vending for modern workplaces.
