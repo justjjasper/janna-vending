@@ -1,4 +1,4 @@
-import machineImg from "../assets/products/mini-360-vending-machine.webp";
+import machineImg from "../assets/products/mini-vending-machine.png";
 
 export const machine = {
   name: "Mini 360 AI Smart Cooler",

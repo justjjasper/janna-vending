@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom'
-import { IconPhoto } from '@tabler/icons-react'
-import { useState } from 'react'
-import { productTabs, products, type ProductCategory } from '../data/products'
-import { Button } from '../components/ui/Button'
-import { Card } from '../components/ui/Card'
-import { Section } from '../components/ui/Section'
-import { SectionHeading } from '../components/ui/Typography'
+import { Link } from "react-router-dom";
+import { IconPhoto } from "@tabler/icons-react";
+import { useState } from "react";
+import { productTabs, products, type ProductCategory } from "../data/products";
+import { Button } from "../components/ui/Button";
+import { Card } from "../components/ui/Card";
+import { Section } from "../components/ui/Section";
+import { SectionHeading } from "../components/ui/Typography";
 
 function ProductGrid({ category }: { category: ProductCategory }) {
-  const filtered = products.filter((p) => p.category === category)
+  const filtered = products.filter((p) => p.category === category);
 
   return (
     <ul
@@ -29,7 +29,12 @@ function ProductGrid({ category }: { category: ProductCategory }) {
                 />
               ) : (
                 <div role="img" aria-label={product.alt}>
-                  <IconPhoto size={32} stroke={1.5} className="text-muted/50" aria-hidden="true" />
+                  <IconPhoto
+                    size={32}
+                    stroke={1.5}
+                    className="text-muted/50"
+                    aria-hidden="true"
+                  />
                 </div>
               )}
             </div>
@@ -40,12 +45,16 @@ function ProductGrid({ category }: { category: ProductCategory }) {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 export function ProductsPreview() {
   return (
-    <Section id="products" background="section" ariaLabelledBy="products-preview-heading">
+    <Section
+      id="products"
+      background="section"
+      ariaLabelledBy="products-preview-heading"
+    >
       <SectionHeading
         id="products-preview-heading"
         title="Products"
@@ -57,11 +66,11 @@ export function ProductsPreview() {
         </Button>
       </div>
     </Section>
-  )
+  );
 }
 
 export function ProductsPage() {
-  const [activeTab, setActiveTab] = useState<ProductCategory>('beverages')
+  const [activeTab, setActiveTab] = useState<ProductCategory>("beverages");
 
   return (
     <Section ariaLabelledBy="products-page-heading" className="pt-12">
@@ -77,7 +86,7 @@ export function ProductsPage() {
         aria-label="Product categories"
       >
         {productTabs.map((tab) => {
-          const isActive = activeTab === tab.id
+          const isActive = activeTab === tab.id;
           return (
             <button
               key={tab.id}
@@ -89,13 +98,13 @@ export function ProductsPage() {
               onClick={() => setActiveTab(tab.id)}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                 isActive
-                  ? 'bg-primary text-white'
-                  : 'bg-section text-charcoal hover:bg-border/60'
+                  ? "bg-primary text-white"
+                  : "bg-section text-charcoal hover:bg-border/60"
               }`}
             >
               {tab.label}
             </button>
-          )
+          );
         })}
       </div>
 
@@ -113,12 +122,15 @@ export function ProductsPage() {
       ))}
 
       <p className="mt-12 text-center text-sm text-muted">
-        Have a specific request?{' '}
-        <Link to="/contact" className="font-medium text-primary hover:text-primary-dark">
+        Have a specific request?{" "}
+        <Link
+          to="/contact"
+          className="font-medium text-primary hover:text-primary-dark"
+        >
           Let us know
-        </Link>{' '}
+        </Link>{" "}
         and we will add it to your machine.
       </p>
     </Section>
-  )
+  );
 }
