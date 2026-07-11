@@ -1,8 +1,10 @@
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, AnimatePresence } from "motion/react";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
+import { useTheme } from "../../context/ThemeContext";
 
-import machineImg from "../../assets/janna-vending-machine-hero.png";
+import machineDark from "../../assets/janna-vending-machine-hero.png";
+import machineLight from "../../assets/janna-vending-machine-sunset.png";
 import bakedLays from "../../assets/products/baked-lays-bbq.png";
 import celsius from "../../assets/products/celsius.png";
 import fairlife from "../../assets/products/fairlife.png";
@@ -32,6 +34,8 @@ const products = [
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const { theme } = useTheme();
+  const machineImg = theme === "dark" ? machineDark : machineLight;
 
   return (
     <section
@@ -93,15 +97,22 @@ export function Hero() {
               className="pointer-events-none absolute top-1/2 left-0 -translate-x-1/3 -translate-y-1/2 h-[500px] w-[300px] rounded-full bg-primary/[0.10] blur-[100px] lg:h-[600px] lg:w-[350px]"
             />
 
-            {/* Main vending machine */}
+            {/* Main vending machine - crossfades between sunset (light) and night (dark) */}
             <div className="relative z-10 w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[420px] xl:max-w-[460px]">
-              <img
-                src={machineImg}
-                alt="Janna Vending smart vending machine — fully stocked with snacks and drinks"
-                className="relative z-10 h-auto w-full rounded-2xl object-cover drop-shadow-[0_20px_80px_rgba(16,185,129,0.12)]"
-                width={460}
-                height={690}
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={theme}
+                  src={machineImg}
+                  alt="Janna Vending smart vending machine - fully stocked with snacks and drinks"
+                  className="relative z-10 h-auto w-full rounded-2xl object-cover shadow-[0_20px_60px_-10px_rgba(0,0,0,0.35),0_8px_20px_-4px_rgba(0,0,0,0.18)] dark:shadow-[0_12px_40px_-6px_rgba(0,0,0,0.6),0_4px_12px_-2px_rgba(0,0,0,0.35)]"
+                  width={460}
+                  height={690}
+                  initial={reduce ? false : { opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
+                />
+              </AnimatePresence>
             </div>
 
             {/* Floating product showcase card */}
@@ -111,12 +122,12 @@ export function Hero() {
               transition={{ ...transition, delay: 0.55 }}
               className="absolute -bottom-4 -left-4 z-20 sm:bottom-4 sm:-left-6 lg:-left-12 lg:bottom-8 xl:-left-16"
             >
-              <div className="rotate-[-4deg] rounded-2xl border border-border/60 bg-section/90 p-3 shadow-elevated backdrop-blur-md sm:p-4">
+              <div className="rotate-[-4deg] rounded-2xl border border-border bg-background p-3 shadow-[0_16px_50px_-10px_rgba(0,0,0,0.2),0_6px_16px_-4px_rgba(0,0,0,0.1)] dark:shadow-[0_16px_50px_-10px_rgba(0,0,0,0.55),0_6px_16px_-4px_rgba(0,0,0,0.3)] sm:p-4">
                 <div className="grid grid-cols-3 gap-2 sm:gap-2.5">
                   {products.map((p) => (
                     <div
                       key={p.alt}
-                      className="flex h-16 w-16 items-center justify-center rounded-xl bg-background/60 p-1.5 sm:h-[4.5rem] sm:w-[4.5rem] sm:p-2"
+                      className="flex h-16 w-16 items-center justify-center rounded-xl bg-section p-1.5 sm:h-[4.5rem] sm:w-[4.5rem] sm:p-2"
                     >
                       <img
                         src={p.src}
