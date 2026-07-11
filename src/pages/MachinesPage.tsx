@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import { machine } from '../data/machine'
-import { Button } from '../components/ui/Button'
-import { Section } from '../components/ui/Section'
-import { SectionHeading } from '../components/ui/Typography'
-import { Reveal } from '../components/ui/Reveal'
+import { Link } from "react-router-dom";
+import { machine } from "../data/machine";
+import { Button } from "../components/ui/Button";
+import { Section } from "../components/ui/Section";
+import { SectionHeading } from "../components/ui/Typography";
+import { Reveal } from "../components/ui/Reveal";
 
 export function MachinesPreview() {
   return (
@@ -44,7 +44,7 @@ export function MachinesPreview() {
         </div>
       </Reveal>
     </Section>
-  )
+  );
 }
 
 export function MachinesPage() {
@@ -122,15 +122,15 @@ export function MachinesPage() {
         </div>
       </div>
       <p className="mt-10 text-center text-sm text-muted">
-        Interested in a different setup?{' '}
+        Interested in a different setup?{" "}
         <Link
           to="/contact"
           className="font-medium text-primary transition-colors duration-200 hover:text-primary-dark"
         >
           Contact us
-        </Link>{' '}
+        </Link>{" "}
         to discuss your location.
       </p>
     </Section>
-  )
+  );
 }

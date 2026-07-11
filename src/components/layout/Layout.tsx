@@ -21,9 +21,11 @@ export function Layout() {
     <div className="flex min-h-[100dvh] flex-col">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
+        className="fixed left-1/2 z-50 -translate-x-1/2 -translate-y-full opacity-0 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] focus:translate-y-3 focus:opacity-100 focus:outline-none"
       >
-        Skip to main content
+        <span className="inline-flex items-center rounded-full bg-charcoal px-4 py-2 text-sm font-medium text-background shadow-elevated">
+          Skip to main content
+        </span>
       </a>
       <Header />
       <main id="main-content" className="flex-1">

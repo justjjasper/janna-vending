@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom'
-import { navItems } from '../../data/navigation'
-import { Container } from '../ui/Container'
+import { Link } from "react-router-dom";
+import { navItems } from "../../data/navigation";
+import { Container } from "../ui/Container";
 
 const contactInfo = {
-  email: 'jannavending@gmail.com',
-  phone: '310-989-4448',
-}
+  email: "jannavending@gmail.com",
+  phone: "310-989-4448",
+};
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border bg-section">
@@ -31,8 +31,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              Premium smart vending for workplaces across the Los Angeles area. Fresh
-              snacks, zero hassle.
+              Premium smart vending for workplaces across the Los Angeles area.
+              Fresh snacks, zero hassle.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`tel:${contactInfo.phone.replace(/-/g, '')}`}
+                  href={`tel:${contactInfo.phone.replace(/-/g, "")}`}
                   className="text-sm text-muted transition-colors duration-200 hover:text-charcoal"
                 >
                   {contactInfo.phone}
@@ -99,14 +99,15 @@ export function Footer() {
               Service area
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Los Angeles County including Burbank, LA, Carson, Long Beach, and surrounding communities.
+              Los Angeles County including Burbank, LA, Carson, Long Beach, and
+              surrounding communities.
             </p>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="text-sm text-muted">
-            &copy; {currentYear} Janna Vending. All rights reserved.
+            &copy; {currentYear} Janna Vending LLC. All rights reserved.
           </p>
           <p className="text-sm text-muted">
             Smart vending for modern workplaces.
@@ -114,5 +115,5 @@ export function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }
