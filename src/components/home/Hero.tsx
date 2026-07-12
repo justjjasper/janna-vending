@@ -62,10 +62,9 @@ export function Hero() {
 
             <h1
               id="hero-heading"
-              className="mt-6 font-display text-4xl font-bold tracking-tighter text-charcoal sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]"
+              className="mt-6 font-display text-[2rem] font-bold tracking-tighter text-charcoal sm:text-5xl lg:text-[3.5rem] leading-[1.1] lg:leading-[1.05]"
             >
-              Smart vending for
-              <br className="hidden sm:block" />
+              Smart vending for <br className="hidden sm:block" />
               modern workplaces
             </h1>
 
@@ -120,7 +119,7 @@ export function Hero() {
               initial={reduce ? false : { opacity: 0, x: -20, y: 12 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
               transition={{ ...transition, delay: 0.55 }}
-              className="absolute -bottom-4 -left-4 z-20 sm:bottom-4 sm:-left-6 lg:-left-12 lg:bottom-8 xl:-left-16"
+              className="absolute -bottom-4 -left-4 z-20 sm:bottom-4 sm:-left-6 lg:-left-12 lg:bottom-8 xl:-left-16 hidden lg:block"
             >
               <div className="rotate-[-4deg] rounded-2xl border border-border bg-background p-3 shadow-[0_16px_50px_-10px_rgba(0,0,0,0.2),0_6px_16px_-4px_rgba(0,0,0,0.1)] dark:shadow-[0_16px_50px_-10px_rgba(0,0,0,0.55),0_6px_16px_-4px_rgba(0,0,0,0.3)] sm:p-4">
                 <div className="grid grid-cols-3 gap-2 sm:gap-2.5">
