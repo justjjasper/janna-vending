@@ -4,7 +4,6 @@ import { Container } from "../ui/Container";
 
 const contactInfo = {
   email: "jannavending@gmail.com",
-  phone: "310-989-4448",
 };
 
 export function Footer() {
@@ -81,14 +80,6 @@ export function Footer() {
                   className="text-sm text-muted transition-colors duration-200 hover:text-charcoal"
                 >
                   {contactInfo.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${contactInfo.phone.replace(/-/g, "")}`}
-                  className="text-sm text-muted transition-colors duration-200 hover:text-charcoal"
-                >
-                  {contactInfo.phone}
                 </a>
               </li>
             </ul>
